@@ -1,1 +1,60 @@
 @include aoa-bg-series($bg__init,$classes_init);
+
+.contact,.services{
+    &-s3{
+        background-blend-mode: multiply !important;
+        background-color: #999 !important;
+    }
+}
+.services{
+    &-s1{
+        background-position: center !important;
+    }
+}
+.text{
+    &-shadow{
+        text-shadow: $text__shadow;
+    }
+}
+textarea{
+    resize: none;
+}
+nav{
+    z-index: 10;
+}
+
+@media all and (max-width: 767px){
+    .contact{
+        &-s1{
+            * {
+                color: #fff!important;
+                text-shadow: $text__shadow;
+            }
+            background-blend-mode: multiply !important;
+            background-color: #999 !important;
+        }
+    }
+    .index,.services{
+        &-s1{
+            * {
+                color: #fff!important;
+                text-shadow: $text__shadow;
+            }
+            background-blend-mode: multiply !important;
+            background-color: #999 !important;
+            background-position: left!important;
+        }
+    }
+    .navbar{
+        &-toggler{
+            background-color: #666;
+            border-color: #333;
+        }
+        &-nav{
+            background-color: #666;
+            border: 1px solid #333;
+            opacity: 0.9;
+            padding: 10px
+        }
+    }
+}
